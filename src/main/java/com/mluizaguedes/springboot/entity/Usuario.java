@@ -1,27 +1,42 @@
 package com.mluizaguedes.springboot.entity;
 
+import java.util.Set;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "usr_usuario")
-
 public class Usuario {
 
-    @Id //id é a chave primária
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //a coluna é gerada altomatica 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "usr_id")
-    private Long id; //quando a primeira letra é minúscula (jeito primitivo), o atributo não aceita nulo 
+    private Long id;
 
     @Column(name = "usr_nome")
     private String nome;
 
     @Column(name = "usr_senha")
     private String senha;
+
+    @OneToMany(mappedBy = "usuario")
+    private Set<Anotacao> anotacoes;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "uau_usuario_autorizacao", 
+            joinColumns = {@JoinColumn(name = "usr_id")},
+            inverseJoinColumns = {@JoinColumn(name = "aut_id")})
+    private Set<Autorizacao> autorizacoes;
 
     public Long getId() {
         return id;
@@ -47,5 +62,20 @@ public class Usuario {
         this.senha = senha;
     }
 
+    public Set<Anotacao> getAnotacoes() {
+        return anotacoes;
+    }
+
+    public void setAnotacoes(Set<Anotacao> anotacoes) {
+        this.anotacoes = anotacoes;
+    }
+
+    public Set<Autorizacao> getAutorizacoes() {
+        return autorizacoes;
+    }
+
+    public void setAutorizacoes(Set<Autorizacao> autorizacoes) {
+        this.autorizacoes = autorizacoes;
+    }
     
 }
