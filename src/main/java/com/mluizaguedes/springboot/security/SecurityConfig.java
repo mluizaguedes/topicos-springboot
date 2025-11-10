@@ -1,4 +1,4 @@
-package main.java.com.mluizaguedes.springboot.security;
+package com.mluizaguedes.springboot.security;
 
 import java.util.Arrays;
 import java.util.List;

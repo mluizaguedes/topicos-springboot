@@ -1,4 +1,4 @@
-package main.java.com.mluizaguedes.springboot.controller;
+package com.mluizaguedes.springboot.controller;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import br.gov.sp.fatec.springtopicos20252.security.JwtUtils;
-import br.gov.sp.fatec.springtopicos20252.security.Login;
+import com.mluizaguedes.springboot.security.JwtUtils;
+import com.mluizaguedes.springboot.security.Login;
 
 @RestController
 @CrossOrigin

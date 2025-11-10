@@ -1,8 +1,8 @@
-package main.java.com.mluizaguedes.springboot.service;
+package com.mluizaguedes.springboot.service;
 
 import java.util.List;
 
-import br.gov.sp.fatec.springtopicos20252.entity.Anotacao;
+import com.mluizaguedes.springboot.entity.Anotacao;
 
 public interface AnotacaoService {
 

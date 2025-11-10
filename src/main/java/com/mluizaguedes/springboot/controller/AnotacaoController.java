@@ -1,4 +1,4 @@
-package main.java.com.mluizaguedes.springboot.controller;
+package com.mluizaguedes.springboot.controller;
 
 import java.net.URI;
 import java.util.List;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.gov.sp.fatec.springtopicos20252.entity.Anotacao;
-import br.gov.sp.fatec.springtopicos20252.service.AnotacaoService;
+import com.mluizaguedes.springboot.entity.Anotacao;
+import com.mluizaguedes.springboot.service.AnotacaoService;
 
 @RestController
 @CrossOrigin

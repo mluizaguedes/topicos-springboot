@@ -1,4 +1,4 @@
-package main.java.com.mluizaguedes.springboot.service;
+package com.mluizaguedes.springboot.service;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import br.gov.sp.fatec.springtopicos20252.entity.Anotacao;
-import br.gov.sp.fatec.springtopicos20252.repository.AnotacaoRepository;
+import com.mluizaguedes.springboot.entity.Anotacao;
+import com.mluizaguedes.springboot.repository.AnotacaoRepository;
 
 @Service
 public class AnotacaoServiceImpl implements AnotacaoService{

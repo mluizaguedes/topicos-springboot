@@ -1,4 +1,4 @@
-package main.java.com.mluizaguedes.springboot.controller;
+package com.mluizaguedes.springboot.controller;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
