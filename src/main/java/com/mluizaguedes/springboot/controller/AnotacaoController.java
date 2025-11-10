@@ -18,7 +18,7 @@ import com.mluizaguedes.springboot.service.AnotacaoService;
 
 @RestController
 @CrossOrigin
-@RequestMapping(value = "/anotacao")
+@RequestMapping(value = "/anotacao") // rota base
 public class AnotacaoController {
 
     private AnotacaoService service;
